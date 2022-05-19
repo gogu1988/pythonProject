@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220519 16:14:52.234" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="C:\Users\govreddy\PycharmProjects\pythonProject\TestCases\TC1.robot">
+<test id="s1-t1" name="ExtractLinks" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 16:14:52.380" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220519 16:14:52.379" endtime="20220519 16:15:05.457"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 16:15:05.458" endtime="20220519 16:15:05.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@title='Search']</arg>
+<arg>robotframework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:05.621" level="INFO">Typing text 'robotframework' into text field 'xpath://input[@title='Search']'.</msg>
+<status status="PASS" starttime="20220519 16:15:05.620" endtime="20220519 16:15:05.827"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath://input[@title='Search']</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220519 16:15:05.828" level="INFO">Sending key(s) ('RETURN',) to xpath://input[@title='Search'] element.</msg>
+<msg timestamp="20220519 16:15:06.147" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220519 16:15:06.147" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220519 16:15:05.827" endtime="20220519 16:15:09.164"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${AllLinksCount}</var>
+<arg>xpath://br/../div</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.182" level="INFO">${AllLinksCount} = 11</msg>
+<status status="PASS" starttime="20220519 16:15:09.165" endtime="20220519 16:15:09.182"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${AllLinksCount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.183" endtime="20220519 16:15:09.184"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${AllLinksCount}+1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.216" level="INFO">${linkText} = https://robotframework.org</msg>
+<status status="PASS" starttime="20220519 16:15:09.186" endtime="20220519 16:15:09.216"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.216" endtime="20220519 16:15:09.217"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.185" endtime="20220519 16:15:09.218"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.243" level="INFO">${linkText} = </msg>
+<status status="PASS" starttime="20220519 16:15:09.218" endtime="20220519 16:15:09.243"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.244" endtime="20220519 16:15:09.245"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.218" endtime="20220519 16:15:09.245"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.271" level="INFO">${linkText} = </msg>
+<status status="PASS" starttime="20220519 16:15:09.245" endtime="20220519 16:15:09.271"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.271" endtime="20220519 16:15:09.273"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.245" endtime="20220519 16:15:09.273"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.299" level="INFO">${linkText} = </msg>
+<status status="PASS" starttime="20220519 16:15:09.273" endtime="20220519 16:15:09.299"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.300" endtime="20220519 16:15:09.300"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.273" endtime="20220519 16:15:09.301"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.326" level="INFO">${linkText} = </msg>
+<status status="PASS" starttime="20220519 16:15:09.301" endtime="20220519 16:15:09.326"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.327" endtime="20220519 16:15:09.328"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.301" endtime="20220519 16:15:09.328"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.356" level="INFO">${linkText} = https://github.com › robotframework › robotframework</msg>
+<status status="PASS" starttime="20220519 16:15:09.328" endtime="20220519 16:15:09.356"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.357" endtime="20220519 16:15:09.358"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.328" endtime="20220519 16:15:09.358"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.385" level="INFO">${linkText} = https://www.tutorialspoint.com › robot_framework</msg>
+<status status="PASS" starttime="20220519 16:15:09.358" endtime="20220519 16:15:09.385"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.385" endtime="20220519 16:15:09.386"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.358" endtime="20220519 16:15:09.386"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.414" level="INFO">${linkText} = https://robocorp.com › docs › robot-framework › basics</msg>
+<status status="PASS" starttime="20220519 16:15:09.386" endtime="20220519 16:15:09.414"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.414" endtime="20220519 16:15:09.416"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.386" endtime="20220519 16:15:09.416"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.444" level="INFO">${linkText} = https://www.geeksforgeeks.org › robot-framework-in-p...</msg>
+<status status="PASS" starttime="20220519 16:15:09.416" endtime="20220519 16:15:09.444"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.445" endtime="20220519 16:15:09.446"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.416" endtime="20220519 16:15:09.446"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.484" level="INFO">${linkText} = https://en.wikipedia.org › wiki › Robot_Framework</msg>
+<status status="PASS" starttime="20220519 16:15:09.446" endtime="20220519 16:15:09.484"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.484" endtime="20220519 16:15:09.486"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.446" endtime="20220519 16:15:09.486"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//br/../div)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220519 16:15:09.516" level="INFO">${linkText} = https://code.google.com › archive › robotframework</msg>
+<status status="PASS" starttime="20220519 16:15:09.487" endtime="20220519 16:15:09.517"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220519 16:15:09.517" endtime="20220519 16:15:09.518"/>
+</kw>
+<status status="PASS" starttime="20220519 16:15:09.487" endtime="20220519 16:15:09.518"/>
+</iter>
+<status status="PASS" starttime="20220519 16:15:09.184" endtime="20220519 16:15:09.518"/>
+</for>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220519 16:15:09.520" endtime="20220519 16:15:11.764"/>
+</kw>
+<status status="PASS" starttime="20220519 16:14:52.379" endtime="20220519 16:15:11.765"/>
+</test>
+<status status="PASS" starttime="20220519 16:14:52.236" endtime="20220519 16:15:11.768"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
